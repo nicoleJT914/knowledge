@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>HTML Forms</h1>
+	<form action="/test" method="post">
+		<section>
+			<h2>commmon attribute</h2>
+			<div>
+				<h3>autofocus</h3>
+				<label for="name">
+					<span>name:</span>
+					<input type="text" id="name" name="username" autofocus>
+				</label>
+			</div>
+			<div>
+				<h3>disabled</h3>
+				<label for="mail">
+					<span>email:</span>
+					<input type="email" id="mail" name="usermail" disabled>
+				</label>
+			</div>
+			<div>
+				<h3>value</h3>
+				<span>gender:</span>
+				<label for="gender1">
+					<input type="radio" id="gender1" name="gender" value="male">male
+				</label>
+				<label for="gender2">
+					<input type="radio" id="gender2" name="gender" value="female">female
+				</label>
+			</div>
+		</section>
+			<hr>
+
+		<section>
+			<h2>Text input fields</h2>
+			<h3>Single line text fields</h3>
+			<div>
+				<h4>basic single line text field</h4>
+				<input type="text" id="comment" name="comment">
+			</div>
+			<div>
+				<h4>E-mail address field</h4>
+				<input type="email" id="email" name="email" multiple>
+			</div>
+			<div>
+				<h4>Password field</h4>
+				<input type="password" id="pwd" name="pwd">
+			</div>
+			<div>
+				<h4>Search field</h4>
+				<input type="search" id="search" name="search">
+			</div>
+			<div>
+				<h4>Phone number field</h4>
+				<input type="tel" id="tel" name="tel">
+			</div>
+			<div>
+				<h4>URL field</h4>
+				<input type="url" id="url" name="url">
+			</div>
+
+			<h3>Multi-line text fields</h3>
+			<div>
+				<textarea cols="30" rows="10"></textarea>
+			</div>
+		</section>
+		<hr>
+
+		<section>
+			<h2>Drop-down content</h2>
+			<h3>Select box</h3>
+			<div>
+				<select id="simple" name="simple">
+				  <option>Banana</option>
+				  <option>Cherry</option>
+				  <option>Lemon</option>
+				</select>
+
+				<h4>optgroup</h4>
+				<select id="groups" name="groups">
+					<optgroup label="fruits">
+						<option>Banana</option>
+						<option selected>Cherry</option>
+						<option>Lemon</option>
+					</optgroup>
+					<optgroup label="vegetables">
+						<option>Carrot</option>
+						<option>Eggplant</option>
+						<option>Potato</option>
+					</optgroup>
+				</select>
+			</div>
+
+			<h3>Multiple choice select box</h3>
+			<div>
+				<h4>holding down cmd/ctrl and clicking multiple values</h4>
+				<select multiple id="multi" name="multi">
+				  <option>Banana</option>
+				  <option>Cherry</option>
+				  <option>Lemon</option>
+				</select>
+			</div>
+
+			<h3>Autocomplete box</h3>
+			<div>
+				<h4>safari and IE below 10 don't support well</h4>
+				<label for="myFruit">What's your favorite fruit?</label>
+				<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+				<datalist id="mySuggestion">
+				  <option>Apple</option>
+				  <option>Banana</option>
+				  <option>Blackberry</option>
+				  <option>Blueberry</option>
+				  <option>Lemon</option>
+				  <option>Lychee</option>
+				  <option>Peach</option>
+				  <option>Pear</option>
+				</datalist>
+			</div>
+			<div>
+				<h4>fallback version</h4>
+				<label for="myFruit">What is your favorite fruit? (With fallback)</label>
+				<input type="text" id="myFruit" name="fruit" list="fruitList">	
+				<datalist id="fruitList">
+				  <label for="suggestion">or pick a fruit</label>
+				  <select id="suggestion" name="altFruit">
+				    <option>Apple</option>
+				    <option>Banana</option>
+				    <option>Blackberry</option>
+				    <option>Blueberry</option>
+				    <option>Lemon</option>
+				    <option>Lychee</option>
+				    <option>Peach</option>
+				    <option>Pear</option>
+				  </select>
+				</datalist>
+			</div>
+		</section>
+		<hr>
+
+		<section>
+			<h2>Checkable items</h2>
+			<h3>Check box</h3>
+			<div>
+				<input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+			</div>
+			<h3>Radio button</h3>
+			<div>
+				<input type="radio" checked id="soup" name="meal">
+			</div>
+			<h3>Example</h3>
+			<div>
+				<fieldset>
+				  <legend>What is your favorite meal?</legend>
+				  <ul>
+				    <li>
+				      <label for="soup">Soup</label>
+				      <input type="radio" checked id="soup" name="meal" value="soup">
+				    </li>
+				    <li>
+				      <label for="curry">Curry</label>
+				      <input type="radio" id="curry" name="meal" value="curry">
+				    </li>
+				    <li>
+				      <label for="pizza">Pizza</label>
+				      <input type="radio" id="pizza" name="meal" value="pizza">
+				    </li>
+				  </ul>
+				</fieldset>
+			</div>
+		</section>
+		<hr>
+
+		<section>
+			<h2>buttons</h2>
+			<h3>submit</h3>
+			<div>
+				<button type="submit">
+    				This a <br><strong>submit button</strong>
+				</button>
+				<input type="submit" value="This is a submit button">
+			</div>
+			<h3>reset</h3>
+			<div>
+				<button type="reset">
+    				This a <br><strong>reset button</strong>
+				</button>
+				<input type="reset" value="This is a reset button">
+			</div>
+		</section>
+		<hr>
+
+		<section>
+			<h2>Advanced form widgets</h2>
+			<h3>date</h3>
+			<div>
+				<input type="number" name="age" id="age" min="1" max="10" step="2">
+			</div>
+			<h3>Sliders</h3>
+			<div>
+				<h4>basic</h4>
+				<input type="range" name="bean" id="bean" min="0" max="500" step="10">
+			</div>
+			<div>
+				<h4>Visual sliders(not supported below IE10)</h4>
+				<label for="beans">How many beans can you eat?</label>
+				<input type="range" name="beans" id="beans" min="0" max="500" step="10">
+				<span class="beancount"></span>
+			</div>
+			<h3>Date and time picker</h3>
+			<div>
+				<strong>poorly supported in IE, FF and Safari</strong>
+				<h4>Date</h4>
+				<input type="date" name="date" id="date">
+				<h4>datetime-local</h4>
+				<input type="datetime-local" name="datetime" id="datetime">
+				<h4>month</h4>
+				<input type="month" name="month" id="month">
+				<h4>time</h4>
+				<input type="time" name="time" id="time">
+				<h4>week</h4>
+				<input type="week" name="week" id="week">
+			</div>
+			<h3>Color picker</h3>
+			<strong>IE and Safari don't support</strong>
+			<div>
+				<input type="color" name="color" id="color">
+			</div>
+		</section>
+		<hr>
+
+		<section>
+			<h2>Other widgets</h2>
+			<h3>File picker</h3>
+			<div>
+				<input type="file" name="file" id="file" accept="image/*" multiple>
+			</div>
+			<h3>Hidden content</h3>
+			<div>
+				<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+			</div>
+			<h3>Image button</h3>
+			<div>
+				<input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
+				<p>Note:显示为img形式的提交按钮。提交时并不会提交值，而是提交点击的二维坐标，对于“hotmap”很有用。</p>
+			</div>
+			<h3>Meters and progress bars</h3>
+			<div>
+				<h4>Progress</h4>
+				<progress max="100" value="75">75/100</progress>
+				<p>Note:progress中的内容是一种fallback。</p>
+				<h4>Meter</h4>
+				<strong>not supported in IE</strong>
+				<meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+			</div>
+		</section>
+	</form>
+	<script type="text/javascript">
+		// visual sliders
+		var beans = document.querySelector('#beans');
+		var count = document.querySelector('.beancount');
+
+		count.textContent = beans.value;
+
+		beans.oninput = function() {
+		  count.textContent = beans.value;
+		}
+
+	</script>
+</body>
+</html>
